@@ -4,28 +4,28 @@ contract myChain {
     //设置事件，记录日志
     //添加机构
     event AddOrganizationEvent(int256 ret, address addr, uint256 creditLevel);
-	//添加资产
+    //添加资产
     event AddAmountEvent(int256 ret, address addr, uint256 amount);
-	//获取余额
+    //获取余额
     event GetAmountEvent(
         address addr,
         uint256 amount,
         uint256 bond,
         uint256 debt
     );
-	//设置签名
+    //设置签名
     event SignatureEvent(address debtor, address debtee, uint256 amount);
     //债务转移
-	event TransferEvent(
+    event TransferEvent(
         int256 ret,
         address sponsor,
         address src,
         address dest,
         uint256 amount
     );
-	//向银行融资
+    //向银行融资
     event FinancingEvent(int256 ret, address sponsor, uint256 amount);
-	//支付应收账款
+    //支付应收账款
     event PaybackEvent(
         int256 ret,
         address debtor,
@@ -48,9 +48,9 @@ contract myChain {
         bool isValid;
         address addr;
         uint256 creditLevel;
-        uint256 amount;						  // 净资产
-        uint256 credit_amount; 				  // 债权资产
-        uint256 debt_amount; 				  // 负债额度
+        uint256 amount; // 净资产
+        uint256 credit_amount; // 债权资产
+        uint256 debt_amount; // 负债额度
         mapping(address => Receipt) receipts; // 应收账款列表
     }
 
@@ -62,7 +62,7 @@ contract myChain {
     }
 
     uint256 public numOfOrganizations; // 机构总数
-    mapping(address => Organization) public organizations; 
+    mapping(address => Organization) public organizations;
     Organization bank; // 特殊机构 => 银行
 
     // 添加机构
@@ -109,6 +109,24 @@ contract myChain {
         );
         return organizations[msg.sender].amount;
     }
+    function getDebt() public returns (uint256) {
+        emit GetAmountEvent(
+            msg.sender,
+            organizations[msg.sender].amount,
+            organizations[msg.sender].credit_amount,
+            organizations[msg.sender].debt_amount
+        );
+        return organizations[msg.sender].debt_amount;
+    }
+    function getCredit() public returns (uint256) {
+        emit GetAmountEvent(
+            msg.sender,
+            organizations[msg.sender].amount,
+            organizations[msg.sender].credit_amount,
+            organizations[msg.sender].debt_amount
+        );
+        return organizations[msg.sender].credit_amount;
+    }
 
     // 构造函数
     constructor(address bankAddr) public {
@@ -127,7 +145,7 @@ contract myChain {
      * 参数: address debtee 债主地址, uint amount 金额
      **/
     function signature(address debtee, uint256 amount) public {
-        address debtor = msg.sender; 
+        address debtor = msg.sender;
         if (organizations[debtee].receipts[debtor].isValid == false) {
             organizations[debtee].receipts[debtor] = Receipt(
                 true,
@@ -150,11 +168,13 @@ contract myChain {
      * 逻辑: A 欠 B 钱，B 欠 C 钱，B 将A对B的债务转移成A欠C
      **/
     function transfer(address A, address C) public returns (bool) {
-        address B = msg.sender; 
+        address B = msg.sender;
         int256 ret = 0;
-		//要有三个人中传递性欠钱的拓扑结构
-        if (organizations[B].receipts[A].isValid == false ||
-            organizations[C].receipts[B].isValid == false) {
+        //要有三个人中传递性欠钱的拓扑结构
+        if (
+            organizations[B].receipts[A].isValid == false ||
+            organizations[C].receipts[B].isValid == false
+        ) {
             ret = -1;
             emit TransferEvent(ret, B, A, C, 0);
             return false;
@@ -204,7 +224,7 @@ contract myChain {
      **/
     function financing(uint256 amount) public returns (bool) {
         int256 ret = 0;
-        address debtor = msg.sender; 
+        address debtor = msg.sender;
         uint256 credit = organizations[debtor].creditLevel; // 贷款机构信用额度
         uint256 org_amount = organizations[debtor].amount; // 贷款机构现有净资产
         uint256 credit_amount = organizations[debtor].credit_amount; // 贷款机构已有债券金额
@@ -212,9 +232,7 @@ contract myChain {
 
         Receipt memory receipt = Receipt(true, debtor, bank.addr, amount);
         if (bank.receipts[debtor].isValid == false) {
-            if (
-                amount < credit + org_amount + credit_amount - debt_amount
-            ) {
+            if (amount < credit + org_amount + credit_amount - debt_amount) {
                 bank.receipts[debtor] = receipt;
                 organizations[debtor].amount += amount;
                 emit FinancingEvent(ret, debtor, amount);
@@ -222,7 +240,8 @@ contract myChain {
             }
         } else {
             if (
-                amount + bank.receipts[debtor].amount < credit + org_amount + credit_amount - debt_amount
+                amount + bank.receipts[debtor].amount <
+                credit + org_amount + credit_amount - debt_amount
             ) {
                 bank.receipts[debtor].amount += amount;
                 organizations[debtor].amount += amount;

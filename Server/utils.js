@@ -4,7 +4,7 @@ const utils = require('../nodejs-sdk/packages/api/common/utils')
 const web3Utils = require('../nodejs-sdk/packages/api/common/web3lib/utils')
 const PEM = require('../nodejs-sdk/node_modules/pem-file')
 
-Configuration.setConfig(path.join(__dirname, '../nodejs-sdk/packages/cli/conf/config.json'));
+Configuration.setConfig(path.join(__dirname, '../../nodejs-sdk/packages/cli/conf/config.json'));
 const Web3jService = require("../nodejs-sdk/packages/api/web3j").Web3jService;
 const web3jService = new Web3jService();
 
