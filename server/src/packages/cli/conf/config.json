@@ -29,9 +29,9 @@
         }
     ],
     "authentication": {
-        "key": "/root/blockchain_chain/fisco/nodes/127.0.0.1/sdk/node.key",
-        "cert": "/root/blockchain_chain/fisco/nodes/127.0.0.1/sdk/node.crt",
-        "ca": "/root/blockchain_chain/fisco/nodes/127.0.0.1/sdk/ca.crt"
+        "key": "/root/chain/fisco/nodes/127.0.0.1/sdk/node.key",
+        "cert": "/root/chain/fisco/nodes/127.0.0.1/sdk/node.crt",
+        "ca": "/root/chain/fisco/nodes/127.0.0.1/sdk/ca.crt"
     },
     "groupID": 1,
     "chainID": 1,

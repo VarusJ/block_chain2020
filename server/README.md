@@ -7,9 +7,9 @@
 如果链端路径有改动，请自行修改 src/packages/cli/conf/config.json 文件：
 ```
 "authentication": {
-    "key": "/root/blockchain_chain/fisco/nodes/127.0.0.1/sdk/node.key",
-    "cert": "/root/blockchain_chain/fisco/nodes/127.0.0.1/sdk/node.crt",
-    "ca": "/root/blockchain_chain/fisco/nodes/127.0.0.1/sdk/ca.crt"
+    "key": "/root/chain/fisco/nodes/127.0.0.1/sdk/node.key",
+    "cert": "/root/chain/fisco/nodes/127.0.0.1/sdk/node.crt",
+    "ca": "/root/chain/fisco/nodes/127.0.0.1/sdk/ca.crt"
 },
 ```
 将原路径换成对应的新路径
