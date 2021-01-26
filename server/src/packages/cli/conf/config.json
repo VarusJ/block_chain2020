@@ -1,0 +1,41 @@
+{
+    "encryptType": "ECDSA",
+    "accounts": {
+        "Bank": {
+            "type": "pem",
+            "value": "./accounts/bank.pem",
+	    "address":"0x7300ddd09fb0197f9616c72b1a48cd33e8d40d07"
+        },
+        "CarComp": {
+            "type": "pem",
+            "value": "./accounts/carcomp.pem",
+            "address":"0x6a00e6ae186b6cc82d8ff0495540f6ced576ae37"
+        },
+        "TireComp": {
+            "type": "pem",
+            "value": "./accounts/tirecomp.pem",
+            "address":"0x7ba8247a0e737728e69aad3f5f8e9184e0461c25"
+        },
+        "WheelhubComp": {
+            "type": "pem",
+            "value": "./accounts/wheelhubcomp.pem",
+            "address":"0xe41d6d9ae5a73e35599bb7d1123ed3aad526cdee"
+        }
+    },
+    "nodes": [
+        {
+            "ip": "127.0.0.1",
+            "port": "20200"
+        }
+    ],
+    "authentication": {
+        "key": "/root/blockchain_chain/fisco/nodes/127.0.0.1/sdk/node.key",
+        "cert": "/root/blockchain_chain/fisco/nodes/127.0.0.1/sdk/node.crt",
+        "ca": "/root/blockchain_chain/fisco/nodes/127.0.0.1/sdk/ca.crt"
+    },
+    "groupID": 1,
+    "chainID": 1,
+    "timeout": 10000,
+    "contractDir": "../contracts",
+    "contractOutputDir": "../contracts/.output"
+}
