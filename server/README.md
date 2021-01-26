@@ -17,6 +17,6 @@
 ## 开启后端方法：
 ```shell
 yarn install（或 yarn）
-cd src/
+cd server/src/
 node index.js
 ```

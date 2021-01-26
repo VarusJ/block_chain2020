@@ -8,14 +8,14 @@
 
 ### 打开链端方法：
 ```
-cd fisco/nodes/127.0.0.1
+cd chain/fisco/nodes/127.0.0.1
 bash start_all.sh
 ```
 
 
 ## block chain 期末项目——后端
 
-首先确保节点开启 [详见链端](https://gitee.com/varusjz/blockchain_chain)    
+首先确保节点开启  
 
 确保 8000 端口没有占用，如有请自行修改 src/index.js 的末尾监听端口    
  
@@ -32,7 +32,7 @@ bash start_all.sh
 ### 开启后端方法：
 ```shell
 yarn install（或 yarn）
-cd src/
+cd server/src
 node index.js
 ```
 
@@ -45,6 +45,7 @@ node index.js
 
 ### 打开前端方法：
 ```
+cd vue-antd
 cd server
 yarn install
 yarn start

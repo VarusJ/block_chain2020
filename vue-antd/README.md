@@ -6,6 +6,7 @@
 
 打开前端方法：
 ```
+cd vue-antd
 cd server
 yarn install
 yarn start

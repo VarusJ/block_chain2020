@@ -6,7 +6,7 @@
 
 打开链端方法：
 ```
-cd fisco/nodes/127.0.0.1
+cd chain/fisco/nodes/127.0.0.1
 bash start_all.sh
 ```
 
