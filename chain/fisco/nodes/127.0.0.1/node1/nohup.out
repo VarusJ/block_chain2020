@@ -1,0 +1,124 @@
+config file path : config.ini
+[2020-12-20 15:44:17] Initializing...
+FISCO-BCOS Version : 2.6.0
+Build Time         : 20200814 08:45:06
+Build Type         : Linux/clang/Release
+Git Branch         : HEAD
+Git Commit Hash    : e4a5ef2ef64d1943fccc4ebc61467a91779fb1c0
+[2020-12-20 15:44:17] The FISCO-BCOS is running...
+[2020-12-23 12:21:58] FISCO-BCOS program exit normally.
+config file path : config.ini
+[2020-12-23 12:22:04] Initializing...
+FISCO-BCOS Version : 2.6.0
+Build Time         : 20200814 08:45:06
+Build Type         : Linux/clang/Release
+Git Branch         : HEAD
+Git Commit Hash    : e4a5ef2ef64d1943fccc4ebc61467a91779fb1c0
+[2020-12-23 12:22:04] The FISCO-BCOS is running...
+[2020-12-23 12:28:02] FISCO-BCOS program exit normally.
+config file path : config.ini
+[2020-12-23 12:28:29] Initializing...
+FISCO-BCOS Version : 2.6.0
+Build Time         : 20200814 08:45:06
+Build Type         : Linux/clang/Release
+Git Branch         : HEAD
+Git Commit Hash    : e4a5ef2ef64d1943fccc4ebc61467a91779fb1c0
+[2020-12-23 12:28:29] The FISCO-BCOS is running...
+[2020-12-23 12:31:51] FISCO-BCOS program exit normally.
+config file path : config.ini
+[2020-12-23 12:45:52] Initializing...
+FISCO-BCOS Version : 2.6.0
+Build Time         : 20200814 08:45:06
+Build Type         : Linux/clang/Release
+Git Branch         : HEAD
+Git Commit Hash    : e4a5ef2ef64d1943fccc4ebc61467a91779fb1c0
+[2020-12-23 12:45:52] The FISCO-BCOS is running...
+config file path : config.ini
+[2020-12-24 08:58:44] Initializing...
+FISCO-BCOS Version : 2.6.0
+Build Time         : 20200814 08:45:06
+Build Type         : Linux/clang/Release
+Git Branch         : HEAD
+Git Commit Hash    : e4a5ef2ef64d1943fccc4ebc61467a91779fb1c0
+[2020-12-24 08:58:44] The FISCO-BCOS is running...
+[2020-12-24 09:01:05] FISCO-BCOS program exit normally.
+config file path : config.ini
+[2020-12-24 09:01:08] Initializing...
+FISCO-BCOS Version : 2.6.0
+Build Time         : 20200814 08:45:06
+Build Type         : Linux/clang/Release
+Git Branch         : HEAD
+Git Commit Hash    : e4a5ef2ef64d1943fccc4ebc61467a91779fb1c0
+[2020-12-24 09:01:08] The FISCO-BCOS is running...
+[2020-12-24 09:02:19] FISCO-BCOS program exit normally.
+config file path : config.ini
+[2020-12-24 09:04:40] Initializing...
+FISCO-BCOS Version : 2.6.0
+Build Time         : 20200814 08:45:06
+Build Type         : Linux/clang/Release
+Git Branch         : HEAD
+Git Commit Hash    : e4a5ef2ef64d1943fccc4ebc61467a91779fb1c0
+[2020-12-24 09:04:40] The FISCO-BCOS is running...
+[2020-12-24 10:03:22] FISCO-BCOS program exit normally.
+config file path : config.ini
+[2020-12-24 10:03:45] Initializing...
+FISCO-BCOS Version : 2.6.0
+Build Time         : 20200814 08:45:06
+Build Type         : Linux/clang/Release
+Git Branch         : HEAD
+Git Commit Hash    : e4a5ef2ef64d1943fccc4ebc61467a91779fb1c0
+[2020-12-24 10:03:45] The FISCO-BCOS is running...
+[2020-12-24 10:16:45] FISCO-BCOS program exit normally.
+config file path : config.ini
+[2020-12-24 10:16:53] Initializing...
+FISCO-BCOS Version : 2.6.0
+Build Time         : 20200814 08:45:06
+Build Type         : Linux/clang/Release
+Git Branch         : HEAD
+Git Commit Hash    : e4a5ef2ef64d1943fccc4ebc61467a91779fb1c0
+[2020-12-24 10:16:53] The FISCO-BCOS is running...
+config file path : config.ini
+[2021-01-23 04:46:27] Initializing...
+FISCO-BCOS Version : 2.6.0
+Build Time         : 20200814 08:45:06
+Build Type         : Linux/clang/Release
+Git Branch         : HEAD
+Git Commit Hash    : e4a5ef2ef64d1943fccc4ebc61467a91779fb1c0
+[2021-01-23 04:46:27] The FISCO-BCOS is running...
+[2021-01-26 13:28:50] FISCO-BCOS program exit normally.
+config file path : config.ini
+[2021-01-26 13:31:37] Initializing...
+FISCO-BCOS Version : 2.6.0
+Build Time         : 20200814 08:45:06
+Build Type         : Linux/clang/Release
+Git Branch         : HEAD
+Git Commit Hash    : e4a5ef2ef64d1943fccc4ebc61467a91779fb1c0
+[2021-01-26 13:31:38] The FISCO-BCOS is running...
+config file path : config.ini
+[2021-01-26 13:41:26] Initializing...
+[INITIALIZER][P2PInitializer]initConfig for P2PInitializer failed,check Port=30301,EINFO=Throw location unknown (consider using BOOST_THROW_EXCEPTION)
+Dynamic exception type: boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::system::system_error> >
+std::exception::what: bind: Address already in use
+
+config file path : config.ini
+[2021-01-26 13:41:44] Initializing...
+[INITIALIZER][P2PInitializer]initConfig for P2PInitializer failed,check Port=30301,EINFO=Throw location unknown (consider using BOOST_THROW_EXCEPTION)
+Dynamic exception type: boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::system::system_error> >
+std::exception::what: bind: Address already in use
+
+config file path : config.ini
+[2021-01-26 13:42:20] Initializing...
+[INITIALIZER][P2PInitializer]initConfig for P2PInitializer failed,check Port=30301,EINFO=Throw location unknown (consider using BOOST_THROW_EXCEPTION)
+Dynamic exception type: boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::system::system_error> >
+std::exception::what: bind: Address already in use
+
+[2021-01-26 13:43:54] FISCO-BCOS program exit normally.
+config file path : config.ini
+[2021-01-26 13:44:24] Initializing...
+FISCO-BCOS Version : 2.6.0
+Build Time         : 20200814 08:45:06
+Build Type         : Linux/clang/Release
+Git Branch         : HEAD
+Git Commit Hash    : e4a5ef2ef64d1943fccc4ebc61467a91779fb1c0
+[2021-01-26 13:44:24] The FISCO-BCOS is running...
+[2021-01-26 13:44:35] FISCO-BCOS program exit normally.
