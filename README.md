@@ -27,7 +27,7 @@ If you modified the path in the chain-end, please also modify the src/packages/c
 
 ### To open the back-end:
 ```shell
-yarn install（或 yarn）
+yarn install
 cd server/src
 node index.js
 ```
