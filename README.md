@@ -1,25 +1,22 @@
 # block_chain2020
 
-## block chain 期末项目——链端
+## Block Chain Project, chain-end:
 
-本项目链端完全按照 fisco 官方文档第一步配置[地址](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/installation.html)     
+This setting process strictly follows the offical doc of FISCO [Link](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/installation.html)     
+If you are using existing nodes instead of creating them, please follow the above document strictly. Otherwise you may need to modify some part of the code like port number, file path, according to your own environment.
 
-如果打算使用已有运行节点，请完全按照该文档配置，否则需要自行修改相关改动数据（端口、文件路径等）
-
-### 打开链端方法：
+### To open the chain-end:
 ```
 cd chain/fisco/nodes/127.0.0.1
 bash start_all.sh
 ```
 
 
-## block chain 期末项目——后端
+## Block Chain Project, back-end:
 
-首先确保节点开启  
+Before started, make sure all nodes are turned on, and port 8000 is available. If not, you can modify the monitor port number in the end of src/index.js.
 
-确保 8000 端口没有占用，如有请自行修改 src/index.js 的末尾监听端口    
- 
-如果链端路径有改动，请自行修改 src/packages/cli/conf/config.json 文件：
+If you modified the path in the chain-end, please also modify the src/packages/cli/conf/config.json accordingly:
 ```
 "authentication": {
     "key": "/root/chain/fisco/nodes/127.0.0.1/sdk/node.key",
@@ -27,9 +24,8 @@ bash start_all.sh
     "ca": "/root/chain/fisco/nodes/127.0.0.1/sdk/ca.crt"
 },
 ```
-将原路径换成对应的新路径
 
-### 开启后端方法：
+### To open the back-end:
 ```shell
 yarn install（或 yarn）
 cd server/src
@@ -37,13 +33,11 @@ node index.js
 ```
 
 
-## block chain 期末项目——前端
+## Block Chain Project, front-end:
 
-首先确保后端开启
+Make sure the back-end is on and port 8080 is available.
     
-确保 8080 端口没有占用
-
-### 打开前端方法：
+### To open the front-end:
 ```
 cd vue-antd
 cd server
@@ -54,6 +48,6 @@ yarn install
 yarn serve
 ```
 
-### 登录账号
-- 用户名： admin
-- 密码： admin123（均可，未做检测）
+### Admin account:
+- Name: admin
+- Password: admin123
